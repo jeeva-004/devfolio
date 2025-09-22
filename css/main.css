@@ -736,6 +736,7 @@ textarea {
 .header__sm-menu {
   background: #fff;
   position: absolute;
+  text-align: center;
   width: 100%;
   top: 100%;
   visibility: hidden;
@@ -761,7 +762,7 @@ textarea {
   padding: 2.5rem 3rem;
   font-size: 1.6rem;
   color: #333;
-  text-align: right;
+  text-align: center;
   border-bottom: 1px solid #eee;
   font-weight: 700;
   text-transform: uppercase;

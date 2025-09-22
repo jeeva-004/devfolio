@@ -2,12 +2,12 @@
 @use '../abstracts/variables';
 
 .heading-primary {
-  font-size: 6rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
-  @include mixins.respond(phone) {
-    font-size: 4.5rem;
+    font-size: 5rem;
+  @include mixins.respond(phone){
+    font-size: 2.8rem;
   }
 }
 
@@ -101,17 +101,18 @@
   border-radius: variables.$commonBorderRadius;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform .3s;
+  text-align: center;
 
   &:hover {
     transform: translateY(-3px);
   }
 
   &--bg {
-    padding: 1.5rem 8rem;
+    padding: 1rem 5rem;
     font-size: 2rem;
   }
   &--med {
-    padding: 1.5rem 5rem;
+    padding: 1rem 3rem;
     font-size: 1.6rem;
   }
 

@@ -77,14 +77,14 @@ textarea {
 }
 
 .heading-primary {
-  font-size: 6rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
+  font-size: 5rem;
 }
 @media only screen and (max-width: 37.5em) {
   .heading-primary {
-    font-size: 4.5rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -178,16 +178,17 @@ textarea {
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
+  text-align: center;
 }
 .btn:hover {
   transform: translateY(-3px);
 }
 .btn--bg {
-  padding: 1.5rem 8rem;
+  padding: 1rem 5rem;
   font-size: 2rem;
 }
 .btn--med {
-  padding: 1.5rem 5rem;
+  padding: 1rem 3rem;
   font-size: 1.6rem;
 }
 .btn--theme {
@@ -317,6 +318,7 @@ textarea {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10rem;
+  text-align: justify;
 }
 @media only screen and (max-width: 56.25em) {
   .about__content {
@@ -421,17 +423,17 @@ textarea {
 .contact__form-container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background: white;
-  padding: 4rem;
-  margin-top: 6rem;
-  max-width: 80rem;
+  padding: 3rem;
+  margin-top: 4rem;
+  max-width: 60rem;
   text-align: right;
-  width: 95%;
   border-radius: 5px;
   margin: 5rem auto 0 auto;
 }
 @media only screen and (max-width: 37.5em) {
   .contact__form-container {
     padding: 3rem;
+    max-width: 80rem;
   }
 }
 .contact__form-field {
@@ -453,7 +455,7 @@ textarea {
 }
 .contact__form-input {
   color: #333;
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
   border: 1px solid rgb(235, 235, 235);
   font-size: 1.6rem;
@@ -512,11 +514,25 @@ textarea {
 }
 .contact__btn {
   width: 30%;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   font-size: 1.6rem;
 }
 @media only screen and (max-width: 37.5em) {
   .contact__btn {
+    width: 100%;
+  }
+}
+
+.about__content-main {
+  display: flex;
+  flex-direction: column;
+}
+.about__content-main a {
+  width: 35%;
+}
+@media only screen and (max-width: 37.5em) {
+  .about__content-main a {
+    align-self: center;
     width: 100%;
   }
 }
@@ -714,7 +730,7 @@ textarea {
 @media only screen and (max-width: 56.25em) {
   .header__link {
     padding: 3rem 1.8rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 .header__main-ham-menu-cont {
@@ -736,6 +752,7 @@ textarea {
 .header__sm-menu {
   background: #fff;
   position: absolute;
+  text-align: center;
   width: 100%;
   top: 100%;
   visibility: hidden;
@@ -761,7 +778,7 @@ textarea {
   padding: 2.5rem 3rem;
   font-size: 1.6rem;
   color: #333;
-  text-align: right;
+  text-align: center;
   border-bottom: 1px solid #eee;
   font-weight: 700;
   text-transform: uppercase;
@@ -785,7 +802,7 @@ textarea {
 .main-footer__upper {
   display: flex;
   justify-content: space-between;
-  padding: 8rem 0;
+  padding: 8rem 1rem;
 }
 @media only screen and (max-width: 56.25em) {
   .main-footer__upper {
@@ -795,6 +812,7 @@ textarea {
 @media only screen and (max-width: 37.5em) {
   .main-footer__upper {
     display: block;
+    text-align: center;
   }
 }
 .main-footer__row-1 {

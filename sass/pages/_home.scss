@@ -98,6 +98,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10rem;
+    text-align: justify;
     @include mixins.respond(tab-port) {
       grid-template-columns: 1fr;
       grid-gap: 8rem;
@@ -128,6 +129,9 @@
 }
 
 .projects {
+// &__content{
+//   display: flex;
+// }
   &__row {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -202,16 +206,17 @@
   &__form-container {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background: rgba(#fff, 2);
-    padding: 4rem;
-    margin-top: 6rem;
-    max-width: 80rem;
+    padding: 3rem;
+    margin-top: 4rem;
+    max-width: 60rem;
     text-align: right;
-    width: 95%;
+    // width: 95%;
     border-radius: variables.$commonBorderRadius;
 
     margin: 5rem auto 0 auto;
     @include mixins.respond(phone) {
       padding: 3rem;
+      max-width: 80rem;
     }
   }
   &__form-field {
@@ -231,7 +236,7 @@
   }
   &__form-input {
     color: #333;
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
     border: 1px solid rgb(235, 235, 235);
     font-size: 1.6rem;
@@ -285,11 +290,24 @@
   }
   &__btn {
     width: 30%;
-
-    padding: 2rem 4rem;
+    padding: 1rem 4rem;
     font-size: 1.6rem;
     @include mixins.respond(phone) {
       width: 100%;
     }
   }
+}
+
+.about__content-main{
+  display: flex;
+  flex-direction: column;
+  a{
+    width: 35%;
+  }
+  @include mixins.respond(phone){
+  a{
+    align-self: center;
+    width: 100%;
+  }
+}
 }

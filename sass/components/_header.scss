@@ -78,7 +78,7 @@
     }
     @include mixins.respond(tab-port) {
       padding: 3rem 1.8rem;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -102,6 +102,7 @@
   &__sm-menu {
     background: #fff;
     position: absolute;
+    text-align: center;
     width: 100%;
     top: 100%;
     visibility: hidden;
@@ -118,6 +119,7 @@
       @include mixins.respond(phone) {
         visibility: visible;
         opacity: 1;
+        
       }
     }
   }
@@ -128,7 +130,7 @@
       padding: 2.5rem 3rem;
       font-size: 1.6rem;
       color: #333;
-      text-align: right;
+      text-align: center;
       border-bottom: 1px solid #eee;
       font-weight: 700;
       text-transform: uppercase;
