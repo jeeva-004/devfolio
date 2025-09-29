@@ -13,9 +13,9 @@
 
 .heading-sec {
   &__mb-bg {
-    margin-bottom: 11rem;
+    margin-bottom: 6rem;
     @include mixins.respond(tab-port) {
-      margin-bottom: 8rem;
+      margin-bottom: 4rem;
     }
   }
 
@@ -95,7 +95,7 @@
   background: #fff;
   color: #333;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   display: inline-block;
   font-weight: 700;
   border-radius: variables.$commonBorderRadius;
@@ -108,12 +108,12 @@
   }
 
   &--bg {
-    padding: 1rem 5rem;
-    font-size: 2rem;
+    padding: .8rem 4rem;
+    font-size: 1.9rem;
   }
   &--med {
-    padding: 1rem 3rem;
-    font-size: 1.6rem;
+    padding: .6rem 3rem;
+    font-size: 1.5rem;
   }
 
   &--theme {
@@ -125,14 +125,15 @@
     background: #fff;
     border: 2px solid variables.$themeClrPrimary;
     box-shadow: none;
-    padding: calc(1.5rem - 2px) calc(5rem - 2px);
+    padding: calc(1rem - 2px) calc(3rem - 2px);
   }
 }
 
+
 .sec-pad {
-  padding: 12rem 0;
+  padding: 4rem 0;
   @include mixins.respond(tab-port) {
-    padding: 8rem 0;
+    padding: 5rem 0;
   }
 }
 
