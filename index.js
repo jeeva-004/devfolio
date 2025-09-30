@@ -36,3 +36,17 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+
+// filter
+
+const filter_ = document.querySelector('.filter');
+
+filter_.querySelectorAll('button').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    filter_.querySelectorAll('button').forEach(btn=>{
+      btn.classList.remove('active');
+    })
+    btn.classList.add('active');
+  })
+})
