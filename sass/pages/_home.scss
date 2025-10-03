@@ -136,13 +136,15 @@
     }
   }
 
-  .btn-group{
+  .btn-group {
     display: flex;
     gap: 1rem;
-    @include mixins.respond(phone){
+
+    @include mixins.respond(phone) {
       flex-direction: column;
     }
-    button{
+
+    button {
       width: 100%;
     }
   }
@@ -151,29 +153,24 @@
 .projects {
   &__content {
     display: grid;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     @include mixins.respond(phone) {
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
     }
   }
 
   &__row {
     display: flex;
     position: relative;
+    transition: all 1s ease;
     @include mixins.respond(phone) {
       flex-direction: column;
-      align-items: center;
     }
 
-        @include mixins.respond(tab-port) {
+    @include mixins.respond(tab-port) {
       flex-direction: column;
-      align-items: center;
     }
 
     &:last-child {
@@ -183,29 +180,22 @@
     &-img-cont {
       overflow: hidden;
       width: 100%;
-      align-self: center;
-      image{
-        width: 100%;
-      }
+      display: flex;
+      justify-content: center;
     }
 
     &-img {
       width: 90%;
       display: block;
       object-fit: cover;
-      // border: 1px solid;
+      border-radius: variables.$commonBorderRadius;
+      box-shadow: variables.$shadowBox;
     }
 
     &-content {
       padding: 2rem 0;
       display: flex;
       justify-content: center;
-      @include mixins.respond(tab-port) {
-        align-items: center;
-      }
-            @include mixins.respond(phone) {
-        align-items: center;
-      }
 
       .mob-btn {
         display: none;
@@ -213,74 +203,82 @@
         @include mixins.respond(phone) {
           display: block;
         }
-        @include mixins.respond(tab-port){
+
+        @include mixins.respond(tab-port) {
           display: block;
         }
-        @include mixins.respond(big-desktop){
+
+        @include mixins.respond(big-desktop) {
           display: none;
         }
       }
 
       .dek-btn {
-        // display: none;
+        display: none;
         position: absolute;
-        left: 58px;
-        top: 60px;
-        @include mixins.respond(tab-port){
+        left: 125px;
+        top: 70px;
+
+        @include mixins.respond(tab-port) {
           display: none;
         }
-        @include mixins.respond(phone){
+
+        @include mixins.respond(phone) {
           display: none;
         }
       }
 
-      &-title {
-        font-weight: 700;
-        font-size: 2.8rem;
-        margin-bottom: 2rem;
-
-        @include mixins.respond(phone) {
-          font-size: 2.4rem;
-        }
+      @include mixins.respond(tab-port) {
+        align-items: center;
       }
 
-      &-desc {
-        font-size: 1.8rem;
-        color: grey;
-        max-width: 60rem;
-        line-height: 1.7;
-        margin-bottom: 2rem;
-
-        @include mixins.respond(phone) {
-          font-size: 1.7rem;
-        }
+      @include mixins.respond(phone) {
+        align-items: center;
       }
     }
+
+    &:hover .dek-btn {
+      display: flex;
+
+      @include mixins.respond(phone) {
+        display: none;
+      }
+
+      @include mixins.respond(tab-port) {
+        display: none;
+      }
+    }
+
   }
 }
 
-.filter{
+.filter {
   width: fit-content;
   display: flex;
   gap: 1rem;
   margin-inline: auto;
   margin-bottom: 3rem;
-  button{
-    background-color: rgba(#999, 0.6);
+
+  button {
+    background-color: rgba(#999, 0.59);
     padding: .6rem 1.5rem;
     border-radius: 40%;
     color: white;
     font-size: 1.6rem;
     transition: all .5s ease;
-    &:hover{
+
+    &:hover {
       background-color: rgba(#999, 0.4);
     }
   }
-  .active{
+
+  .active {
     background-color: variables.$themeClrPrimary;
     transition: all .5s ease;
-    &:hover{
-      background-color: variables.$themeClrPrimary;;
+
+    &:hover {
+      background-color: variables.$themeClrPrimary;
+      ;
     }
   }
 }
@@ -300,7 +298,6 @@
     margin-top: 3rem;
     max-width: 60rem;
     text-align: right;
-    // width: 95%;
     border-radius: variables.$commonBorderRadius;
 
     margin: 3rem auto 0 auto;
