@@ -152,17 +152,20 @@
 
 .projects {
   &__content {
+    width: 100%;
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
     @include mixins.respond(phone) {
       flex-direction: column;
+      height: auto;
     }
   }
 
   &__row {
     display: flex;
+    width: 100%;
     position: relative;
     transition: all 1s ease;
     @include mixins.respond(phone) {
@@ -185,9 +188,11 @@
     }
 
     &-img {
-      width: 90%;
+      width: 100%;
+      height: 190px;
       display: block;
       object-fit: cover;
+      background-position: center;
       border-radius: variables.$commonBorderRadius;
       box-shadow: variables.$shadowBox;
     }

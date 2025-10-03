@@ -46,6 +46,7 @@
     padding: 8rem 0;
     max-width: 90rem;
     margin: auto;
+    text-align: justify;
 
     &-title {
       font-weight: 700;
@@ -59,11 +60,14 @@
 
   &__showcase-img-cont {
     width: 100%;
+    display: flex;
+    justify-content: center;
     margin-bottom: 6rem;
   }
 
   &__showcase-img {
-    width: 100%;
+    width: 80%;
+    margin-inline: auto;
   }
   &__content-main {
     width: 100%;
