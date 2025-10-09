@@ -1,3 +1,4 @@
+@use '../abstracts/variables';
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone
@@ -40,3 +41,29 @@ Inside media queries 1em is always 16px i.e 1em = 16px at every screen size only
 @mixin secondaryFont {
   font-family: 'Overpass', sans-serif;
 }
+
+@mixin scrollBar($val){
+      /* Chrome, Edge, Safari */
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: variables.$themeClrPrimary;
+      border-radius: 10px;
+      border: 2px solid rgba(0, 0, 0, 0.08);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #3867d6;
+    }
+
+    /* Firefox */
+    scrollbar-width: $val;
+    scrollbar-color: variables.$themeClrPrimary rgba(0, 0, 0, 0.08);
+  }

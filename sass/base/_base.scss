@@ -15,6 +15,8 @@ html {
   font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
   scroll-behavior: smooth;
 
+  @include mixins.scrollBar(15px);
+
   @include mixins.respond(tab-land) {
     // width < 1200?
     font-size: 59%; //1 rem =
@@ -38,7 +40,6 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   font-family: 'Source Sans Pro', sans-serif;
-  
 }
 
 a {
