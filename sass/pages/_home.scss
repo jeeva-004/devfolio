@@ -157,6 +157,7 @@
     justify-content: space-between;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
+
     @include mixins.respond(phone) {
       flex-direction: column;
       height: auto;
@@ -167,7 +168,8 @@
     display: flex;
     width: 100%;
     position: relative;
-    transition: all 1s ease;
+    transition: all 0.8s ease-out;
+
     @include mixins.respond(phone) {
       flex-direction: column;
     }
