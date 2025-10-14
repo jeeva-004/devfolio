@@ -153,8 +153,8 @@
 .projects {
   &__content {
     width: 100%;
-    height: 350px;
-    overflow-y: scroll;
+    height: 400px;
+    overflow-y: auto;
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -321,6 +321,16 @@
 
   &__form-field {
     margin-bottom: 4rem;
+
+    .error {
+      font-size: 1.2rem;
+      margin-top: 7px;
+      color: red;
+
+      @include mixins.respond(phone) {
+        font-size: .7rem;
+      }
+    }
 
     @include mixins.respond(phone) {
       margin-bottom: 3rem;

@@ -22,7 +22,7 @@
     <div class="header__content">
       <div class="header__logo-container">
         <div class="header__logo-img-cont">
-          <img src="./assets/png/my-iage.png" alt="Logo Image" class="header__logo-img" />
+          <img src="./assets/png/my-image.png" alt="Logo Image" class="header__logo-img" />
         </div>
         <span class="header__logo-sub">Jeeva M</span>
       </div>
@@ -170,7 +170,7 @@
         <button class="full-stack">Full-Stack</button>
       </div>
       <div class="projects__content">
-                <div class="projects__row all front">
+        <div class="projects__row all front">
           <div class="projects__row-img-cont">
             <img src="./assets/png/p-1.png" alt="Software Screenshot" class="projects__row-img" loading="lazy" />
           </div>
@@ -182,7 +182,6 @@
 
           </div>
         </div>
-        
         <div class="projects__row all front">
           <div class="projects__row-img-cont">
             <img src="./assets/png/p-2.png" alt="Software Screenshot" class="projects__row-img" loading="lazy" />
@@ -219,21 +218,22 @@
         </span>
       </h2>
       <div class="contact__form-container">
-        <form action="#" class="contact__form">
+        <form class="contact__form">
           <div class="contact__form-field">
             <label class="contact__form-label" for="name">Name</label>
-            <input required placeholder="Enter Your Name" type="text" class="contact__form-input" name="name"
-              id="name" />
+            <input placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name" />
+            <div class="error"></div>
           </div>
           <div class="contact__form-field">
             <label class="contact__form-label" for="email">Email</label>
-            <input required placeholder="Enter Your Email" type="text" class="contact__form-input" name="email"
-              id="email" />
+            <input placeholder="Enter Your Email" type="text" class="contact__form-input" name="email" id="email" />
+            <div class="error"></div>
           </div>
           <div class="contact__form-field">
             <label class="contact__form-label" for="message">Message</label>
-            <textarea required cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message"
-              name="message" id="message"></textarea>
+            <textarea cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message"
+              id="message"></textarea>
+              <div class="error"></div>
           </div>
           <button type="submit" class="btn btn--theme contact__btn">
             Submit
