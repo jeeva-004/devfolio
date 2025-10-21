@@ -77,15 +77,34 @@ const email_ = form_.querySelector('#email');
 const message_ = form_.querySelector('#message');
 
 form_.addEventListener('submit', (e) => {
-  if (!validateForm())
-    e.preventDefault();
-  else {
-    name_.value = '';
-    email_.value = '';
-    message_.value = '';
-    alert("Your message has been sent successfully!");
-  }
-})
+  e.preventDefault();
+
+  if (!validateForm()) return; 
+  const serviceID = "service_zbtnk6v";
+  const templateID = "template_5q6yqpo"; 
+  const publicKey = "xY-VB3Vhmbpea1Pj8";  
+
+  emailjs.init(publicKey);
+
+  const templateParams = {
+    from_name: name_.value,
+    reply_to: email_.value,
+    message: message_.value
+  };
+
+  emailjs.send(serviceID, templateID, templateParams)
+    .then(() => {
+      alert("✅ Your message has been sent successfully!");
+      name_.value = '';
+      email_.value = '';
+      message_.value = '';
+      form_.querySelectorAll('.error').forEach(e => e.innerHTML = '');
+    })
+    .catch((err) => {
+      console.error("❌ EmailJS error:", err);
+      alert("Something went wrong while sending your message. Please try again later.");
+    });
+});
 
 function validateForm() {
   const name_Val = name_.value.trim();
@@ -96,27 +115,20 @@ function validateForm() {
   if (name_Val == '') {
     setError(name_, `This field required!`);
     isRight = false;
-  }
-  else
-    setSuccess(name_);
+  } else setSuccess(name_);
 
   if (email_Val == '') {
-    setError(email_, `This field required!`)
+    setError(email_, `This field required!`);
     isRight = false;
-  }
-  else if (checkEmail()) {
+  } else if (!checkEmail(email_Val)) { 
     setError(email_, `Enter a valid email!`);
     isRight = false;
-  }
-  else
-    setSuccess(email_);
+  } else setSuccess(email_);
 
   if (message_Val == '') {
     setError(message_, `This field required!`);
     isRight = false;
-  }
-  else
-    setSuccess(message_);
+  } else setSuccess(message_);
 
   return isRight;
 }
