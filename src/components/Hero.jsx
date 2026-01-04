@@ -16,10 +16,10 @@ const Hero = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="hidden xl:flex flex-col gap-8 absolute left-12 bottom-0 top-0 justify-center z-10"
             >
-                <SocialLink href="https://github.com" icon="github" />
-                <SocialLink href="https://linkedin.com" icon="linkedin" />
-                <SocialLink href="https://twitter.com" icon="twitter" />
-                <SocialLink href="https://instagram.com" icon="instagram" />
+                <SocialLink href="https://github.com/jeeva-004" icon="github" />
+                <SocialLink href="https://www.linkedin.com/in/jeeva--m/" icon="linkedin" />
+                <SocialLink href="https://x.com/jeeva_004" icon="twitter" />
+                <SocialLink href="https://www.instagram.com/nanthan.2004/" icon="instagram" />
                 <div className="w-[1px] h-24 bg-slate-300 dark:bg-slate-700 mx-auto mt-4"></div>
             </motion.div>
 
