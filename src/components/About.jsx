@@ -28,7 +28,7 @@ const About = () => {
                         <h3 className="text-[2.8rem] font-bold mb-8 text-light-text dark:text-dark-text">Professional Journey</h3>
                         <div className="text-[1.8rem] text-slate-600 dark:text-slate-300 leading-relaxed space-y-6 text-justify">
                             <p>
-                                I am <strong>Jeevanantham</strong>, a Mathematics specialist who has pivoted into advanced computing, currently pursuing my <strong>MCA (Master of Computer Applications)</strong>. My background in mathematics gives me a unique perspective on algorithmic problem-solving and logic optimization.
+                                I am <strong>Jeevanantham</strong>, a Mathematics specialist, <strong>Full Stack Developer</strong> and <strong>Freelancer</strong> who has pivoted into advanced computing, currently pursuing my <strong>MCA (Master of Computer Applications)</strong>. My background in mathematics gives me a unique perspective on algorithmic problem-solving and logic optimization.
                             </p>
                             <p>
                                 My passion lies in <strong>architecting robust web solutions</strong> and constantly expanding my technical arsenal. I believe in a hands-on approach to mastery—translating theoretical concepts into tangible, <strong>practical applications</strong>. Dedicated to <strong>continuous growth and consistency</strong>, I am poised to make a significant impact as a professional in the IT industry.
