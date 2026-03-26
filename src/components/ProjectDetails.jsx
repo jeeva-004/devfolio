@@ -135,6 +135,18 @@ const ProjectDetails = () => {
                                     </div>
                                 </div>
 
+                                {project.credentials && (
+                                    <div className="mt-10 p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl">
+                                        <h4 className="text-[1.8rem] font-bold text-amber-800 dark:text-amber-400 mb-4 flex items-center gap-2">
+                                            <FaCode className="text-amber-600" /> Demo Credentials
+                                        </h4>
+                                        <div className="space-y-2 text-[1.4rem] text-amber-900/80 dark:text-amber-300/80">
+                                            <p><span className="font-bold">Email:</span> {project.credentials.email}</p>
+                                            <p><span className="font-bold">Password:</span> {project.credentials.password}</p>
+                                        </div>
+                                    </div>
+                                )}
+
                             </div>
                         </motion.div>
                     </div>
