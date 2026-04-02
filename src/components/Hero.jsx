@@ -37,18 +37,47 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-[4rem] md:text-[7rem] font-bold tracking-tight mb-6 text-light-text dark:text-dark-text leading-tight"
+                    className="text-[4rem] md:text-[7rem] font-bold tracking-tight mb-6 text-light-text dark:text-dark-text leading-tight flex justify-center flex-wrap items-center"
                 >
-                    I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">Jeevanantham M</span>
+                    <span className="mr-6">I'm</span>
+                    <span className="inline-flex text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600 cursor-crosshair">
+                        {"Jeevanantham M".split("").map((char, index) => {
+                            const xOffset = index % 2 === 0 ? 8 : -8;
+                            const yOffset = index % 3 === 0 ? -12 : 12;
+                            const rotation = index % 2 === 0 ? 10 : -10;
+
+                            return (
+                                <motion.span
+                                    key={index}
+                                    whileHover={{
+                                        x: xOffset,
+                                        y: yOffset,
+                                        rotate: rotation,
+                                        transition: { type: "spring", stiffness: 300, damping: 10 }
+                                    }}
+                                    className="inline-block"
+                                >
+                                    {char === ' ' ? '\u00A0' : char}
+                                </motion.span>
+                            );
+                        })}
+                    </span>
                 </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-[2rem] md:text-[3rem] text-slate-600 dark:text-slate-400 font-light mb-12"
+                <motion.div
+                    className="text-[2rem] md:text-[3rem] text-slate-600 dark:text-slate-400 font-light mb-12 flex justify-center flex-wrap max-w-4xl mx-auto"
                 >
-                    Full Stack Developer | UI/UX Enthusiast | Freelancer
-                </motion.p>
+                    {"UI/UX Enthusiast | Full Stack Dev | Freelancer".split(" ").map((word, index) => (
+                        <motion.span
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.6 + index * 0.15 }}
+                            className="inline-block mr-3 mb-2"
+                        >
+                            {word}
+                        </motion.span>
+                    ))}
+                </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

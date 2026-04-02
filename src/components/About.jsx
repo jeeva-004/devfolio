@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
     // Skills updated as requested
-    const skills = ['C', 'Java', 'React.js', 'Node.js', 'SCSS', 'Tailwind'];
+    const skills = ['C', 'Java', 'JavaScript', 'React.js', 'Node.js', 'SCSS', 'Tailwind'];
 
     return (
         <section id="about" className="py-40 bg-white dark:bg-dark-card transition-colors duration-300">

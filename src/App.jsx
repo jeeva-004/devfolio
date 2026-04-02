@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ProjectDetails from './components/ProjectDetails';
+import Certifications from './components/Certifications';
 
 const Portfolio = () => {
     const { hash } = useLocation();
@@ -30,6 +31,7 @@ const Portfolio = () => {
                 <Hero />
                 <About />
                 <Projects />
+                <Certifications />
                 <Contact />
             </main>
             <Footer />
