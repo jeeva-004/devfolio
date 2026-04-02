@@ -87,7 +87,7 @@ const Contact = () => {
 
             <div className="relative z-10 max-w-[80rem] mx-auto px-8 text-center text-light-text dark:text-dark-text">
                 <div className="mb-16">
-                    <h2 className="text-[4rem] uppercase font-bold tracking-[3px] mb-8 relative inline-block text-black dark:text-white">
+                    <h2 className="text-[2.5rem] sm:text-[3.5rem] md:text-[4rem] uppercase font-bold tracking-[3px] mb-8 relative inline-block text-light-text dark:text-dark-text">
                         Contact
                         <span className="absolute left-1/2 -bottom-6 w-12 h-2 bg-primary -translate-x-1/2 rounded"></span>
                     </h2>

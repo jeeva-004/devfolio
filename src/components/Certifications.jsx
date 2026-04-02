@@ -27,7 +27,7 @@ const Certifications = () => {
         <section id="certifications" className="py-40 bg-white dark:bg-dark-card transition-colors duration-300">
             <div className="max-w-[120rem] mx-auto px-8">
                 <div className="text-center mb-24">
-                    <h2 className="text-[4rem] uppercase font-bold tracking-[3px] mb-8 relative inline-block text-light-text dark:text-dark-text">
+                    <h2 className="text-[2.5rem] sm:text-[3.5rem] md:text-[4rem] uppercase font-bold tracking-[3px] mb-8 relative inline-block text-light-text dark:text-dark-text">
                         Certifications
                         <span className="absolute left-1/2 -bottom-6 w-12 h-2 bg-primary -translate-x-1/2 rounded"></span>
                     </h2>
